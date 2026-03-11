@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Calendar Sign Up</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#f4f4f4;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.signup-box{
+background:white;
+padding:40px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+text-align:center;
+width:350px;
+}
+
+.signup-box input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+.signup-btn{
+width:100%;
+padding:12px;
+background:black;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+.download{
+margin-top:20px;
+display:none;
+}
+
+.download a{
+background:#c7c4a1;
+color:white;
+padding:10px 20px;
+text-decoration:none;
+border-radius:5px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="signup-box">
+
+<h1>Download Your Planwell Calendar Today</h1>
+
+<form onsubmit="showDownload(event)">
+
+<input type="text" placeholder="Name" required>
+
+<input type="email" placeholder="Email" required>
+
+<button class="signup-btn">Sign Up</button>
+
+</form>
+
+<div class="download" id="downloadSection">
+
+<p>Your calendar is ready!</p>
+
+<a href="onlinecalendar.pdf" download>
+Download Calendar
+</a>
+
+</div>
+
+</div>
+
+<script>
+
+function showDownload(event){
+event.preventDefault();
+document.getElementById("downloadSection").style.display="block";
+}
+
+</script>
+
+</body>
+</html>
